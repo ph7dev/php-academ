@@ -9,7 +9,7 @@
 //1-2-3-4-5-6-7-8
 $name = "Иннокентий";
 $age = 17;
-$day = 7;
+
 
 echo "Меня зовут: $name<br>";
 echo "Мне $age лет<br>";
@@ -28,9 +28,15 @@ if ($age <= 59 and $age >= 18){
 <?php
 
 //9-10-11-12
+
+$day = 8;
+
 switch($day){
-    //case ($day <= 5 || $day > 1): echo "День номер $day - рабочий день";break;
-    //case ($day == 7): echo "День номер $day - выходной день";break;
+    case 0 : echo "Задавайте правильно номер дня!";break;
+    case $day >= 1 and $day <= 5: echo "День номер $day - рабочий день";break;
+    case $day >= 6 and $day <= 7: echo "День номер $day - выходной день";break;
+    default : echo "Задавайте правильно номер дня!";
+    /*
     case 1: echo "День номер $day - рабочий день";break;
     case 2: echo "День номер $day - рабочий день";break;
     case 3: echo "День номер $day - рабочий день";break;
@@ -38,6 +44,8 @@ switch($day){
     case 5: echo "День номер $day - рабочий день";break;
     case 6: echo "День номер $day - выходной день";break;
     case 7: echo "День номер $day - выходной день";break;
+    default : echo "Задавайте правильно номер дня!";
+    */
 }
 
 //13
