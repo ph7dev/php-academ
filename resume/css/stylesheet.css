@@ -1,0 +1,72 @@
+.content {
+    width: 800px;
+    background-color: aliceblue;
+    border: 1px solid aquamarine;
+    font-family: Arial;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+.social_network {
+    width: 25px;
+}
+.header{
+    text-align: center;
+}
+h5#created {
+    text-align: right;
+}
+.photo_profil{
+    position: relative;
+    float: right;
+    right: 50px;
+    top: -40px;
+    width: 200px;
+}
+.t_contact{
+    width: 450px;
+}
+td {
+    border-bottom: 1px royalblue solid;
+}
+.specify{
+    font-family: Tahoma;
+    font-style: italic;
+    color: silver;
+}
+.title_position {
+    font-size: 18pt;
+    font-weight: bold;
+}
+.yellow_block{
+    border: 1px beige solid;
+    background-color: beige;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+.yellow_block:hover{
+    border: 1px chocolate solid;
+}
+.education{
+    border: 1px aliceblue solid;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.education:hover{
+    border: 1px chocolate solid;
+}
+.status_edu{
+    font-size: 12pt;
+    font-weight: bold;
+}
+.name_university{
+    font-size: 15pt;
+    font-weight: bold;
+}
+
