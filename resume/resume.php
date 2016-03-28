@@ -1,3 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Slava
+ * Date: 28.03.2016
+ * Time: 17:17
+ */
+include "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +17,12 @@
 </head>
 <body>
 <!-- NEED TO USE
-test fetch
-- h1
-- img
-- ul
-- p
-- <a>
+    test fetch
+    - h1
+    - img
+    - ul
+    - p
+    - <a>
 - hrefs to soc.network as img
 - tables
 -style
@@ -23,10 +32,10 @@ test fetch
 <div class="content">
 
     <h5 id="created"><i>Создано 19.03.2016</i></h5>
-    <h1 class="header">Валюватый Вячеслав Евгеньевич</h1>
+    <h1 class="header"><?=$name?></h1>
     <h3 class="header">Junior PHP программист. <span style="font-family: 'Roboto Condensed'">50 000$/мес.</span></h3>
     <p>
-        Полная или удаленная работа.
+Полная или удаленная работа.
     </p>
 
     <!-- img profil -->
@@ -35,11 +44,11 @@ test fetch
     <table class="t_contact">
         <tr>
             <td>Мобильный телефон:</td>
-            <td>+38 (067) 123 56 98</td>
+            <td><?=$tel?></td>
         </tr>
         <tr>
             <td>Эл. почта</td>
-            <td><a href="mailto:doublep@i.ua">doublep@i.ua</a></td>
+            <td><a href="mailto:<?=$mail?>"><?=$mail?></a></td>
         </tr>
         <tr>
             <td>Социальные сети:</td>
@@ -53,7 +62,7 @@ test fetch
         </tr>
         <tr>
             <td>Дата рождения:</td>
-            <td>30.05.1975</td>
+            <td><?=$dob?></td>
         </tr>
         <tr>
             <td>Гражданство:</td>
@@ -65,7 +74,7 @@ test fetch
         </tr>
         <tr>
             <td>Адрес:</td>
-            <td>г. Киев, ул. Богатырская 123</td>
+            <td><?=$addres?></td>
         </tr>
     </table><br><br>
 
@@ -74,7 +83,7 @@ test fetch
     <h1 class="header">Опыт работы:</h1>
     <span class="title_position">Контент-менеджер, менеджер отдела продаж</span>
     <p>
-        с 05.2013 по 06.2014 <span class="specify">(1 год 1 месяц)</span>
+с 05.2013 по 06.2014 <span class="specify">(1 год 1 месяц)</span>
     </p>
     <span>ООО "Шарашкина Компани". </span>
     <span class="specify">Автомобильные аксессуары.</span>
@@ -89,7 +98,7 @@ test fetch
     <!-- block -->
     <span class="title_position">Менеджер отдела продаж</span>
     <p>
-        с 01.2010 по 08.2010 <span class="specify">(7 месяцев)</span>
+с 01.2010 по 08.2010 <span class="specify">(7 месяцев)</span>
     </p>
     <span>ООО "Конторко ЛТД". </span>
     <span class="specify">(Системы водоснабжения, отопления, канализации).</span>
@@ -122,13 +131,7 @@ test fetch
 <div class="yellow_block">
     <h1 class="header">Дополнительная информация:</h1>
     <p>
-        <span>Личные качества:</span>
-        <ul>
-            <li>дисциплинированный, аккуратный</li>
-            <li>стойкий в стрессовых ситуациях.</li>
-            <li>легко обучаюсь.</li>
-            <li>опыт вождение авто больше 10 лет.</li>
-        </ul>
+        <?=$about?>
     </p>
 </div>
 </body>
