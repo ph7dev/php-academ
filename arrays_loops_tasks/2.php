@@ -146,7 +146,111 @@ for ($i = 1; $i <= 9; $i++){
     echo block($i)."<br>";
 }
 
+//14
+echo tit(14);
+$nums = array (4, 2, 5, 19, 13, 0, 10, 3);
+
+foreach ($nums as $num){
+    if ($num == 2 or $num == 3 or $num == 4){
+        echo "$num Est!<br>";
+    }else{
+        echo "Net!<br>";
+    }
+}
+
+//15
+echo tit(15);
+$nums = array (4, 2, 5, 19, 13, 0, 10);
+$count = 0;
+
+foreach ($nums as $num){
+    $count += 1;
+}
+
+echo $count;
+
+//16
+echo tit(16);
+//задача не ясна
+
+//17
+echo tit(17);
+
+$months = array (
+    'Январь','Февраль',
+    'Март','Апрель','Май',
+    'Июнь','Июль','Август',
+    'Сентябрь','Октябрь','Ноябрь',
+    'Декабрь');
+$now = 'Март';
+
+foreach ($months as $month){
+    if ($now == $month){
+        echo "<b>$month</b><br>";
+    }else{
+        echo "$month<br>";
+    }
+}
+
+//18
+echo tit(18);
+
+$days = array ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+$weekend = array ("Saturday","Sunday");
+$now = "Saturday";
+
+foreach ($days as $day){
+    if ($weekend[0] == $day or $weekend[1] == $day){
+        echo "<b>$day</b><br>";
+    }else{
+        echo "$day<br>";
+    }
+}
+
+//19
+echo tit(19);
+
+$days = array ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+$weekend = array ("Saturday","Sunday");
+$now = "Saturday";
+
+foreach ($days as $day){
+    if ($now == $day){
+        echo "<i>$day</i><br>";
+    }else{
+        echo "$day<br>";
+    }
+}
+
+//20
+echo tit(20);
+
+function xxx($val = 0){
+    $str = "x";
+    for ($i = 0; $i < $val; $i++){
+        $str .= "x";
+    }
+    return $str;
+}
+
+for ($i = 0; $i < 20; $i++){
+    echo xxx ($i)."<br>";
+}
+
+//21
+echo tit(21);
+
+function num($val = '1'){
+    $str = "";
+    for ($i = 0; $i < $val; $i++){
+        $str .= "$val";
+    }
+    return $str;
+}
+
+for ($i = 1; $i < 10; $i++){
+    echo num ($i)."<br>";
+}
 
 
-
-
+////
