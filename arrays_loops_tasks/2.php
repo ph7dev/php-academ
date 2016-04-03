@@ -9,6 +9,8 @@ error_reporting(-1);
 function tit($number){
     return "<br><br><i>//task $number</i><br>";
 }
+
+define ("B","<br>");
 //1
 $elemnts = array ('html', 'css', 'php', 'js', 'jq');
 echo tit(1);
@@ -224,17 +226,11 @@ foreach ($days as $day){
 
 //20
 echo tit(20);
-
-function xxx($val = 0){
-    $str = "x";
-    for ($i = 0; $i < $val; $i++){
-        $str .= "x";
-    }
-    return $str;
-}
+$str = "x";
 
 for ($i = 0; $i < 20; $i++){
-    echo xxx ($i)."<br>";
+    echo $str.B;
+    $str .= "x";
 }
 
 //21
@@ -253,4 +249,33 @@ for ($i = 1; $i < 10; $i++){
 }
 
 
-////
+//22
+echo tit(22);
+
+$str = "xx";
+$cnt = 5;
+
+while ($cnt == true){
+    echo $str."<br>";
+    $str .= "xx";
+    $cnt--;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
