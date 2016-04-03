@@ -236,18 +236,14 @@ for ($i = 0; $i < 20; $i++){
 //21
 echo tit(21);
 
-function num($val = '1'){
-    $str = "";
-    for ($i = 0; $i < $val; $i++){
-        $str .= "$val";
+$str21 = '';
+for ($i = 1; $i < 12; $i++){
+    for ($g = 0; $g < $i; $g++){
+        $str21 .= "$i";
     }
-    return $str;
+    echo $str21.B;
+    $str21 = '';
 }
-
-for ($i = 1; $i < 10; $i++){
-    echo num ($i)."<br>";
-}
-
 
 //22
 echo tit(22);
