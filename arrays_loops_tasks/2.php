@@ -221,9 +221,24 @@ foreach ($months as $month){
 //18
 echo tit(18);
 
-$days = array ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
-$weekend = array ("Saturday","Sunday");
-$now = "Saturday";
+//$days = array ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+
+$days = array(
+    //заполняем массив названиями дней недели
+    //mktime(время,время,время,месяц,число,год)
+    date("l",mktime(0, 0, 0, 04, 4, 2016)),//ПН
+    date("l",mktime(0, 0, 0, 04, 5, 2016)),//ВТ
+    date("l",mktime(0, 0, 0, 04, 6, 2016)),//СР и т.д.
+    date("l",mktime(0, 0, 0, 04, 7, 2016)),
+    date("l",mktime(0, 0, 0, 04, 8, 2016)),
+    date("l",mktime(0, 0, 0, 04, 9, 2016)),
+    date("l",mktime(0, 0, 0, 04, 10, 2016))
+);
+
+$weekend = array (
+    date("l",mktime(0, 0, 0, 04, 9, 2016)),//СБ
+    date("l",mktime(0, 0, 0, 04, 10, 2016))//ВС
+);
 
 foreach ($days as $day){
     if ($weekend[0] == $day or $weekend[1] == $day){
@@ -236,9 +251,19 @@ foreach ($days as $day){
 //19
 echo tit(19);
 
-$days = array ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
-$weekend = array ("Saturday","Sunday");
-$now = "Saturday";
+$days = array(
+    //заполняем массив названиями дней недели
+    //mktime(время,время,время,месяц,число,год)
+    date("l",mktime(0, 0, 0, 04, 4, 2016)),//ПН
+    date("l",mktime(0, 0, 0, 04, 5, 2016)),//ВТ
+    date("l",mktime(0, 0, 0, 04, 6, 2016)),//СР и т.д.
+    date("l",mktime(0, 0, 0, 04, 7, 2016)),
+    date("l",mktime(0, 0, 0, 04, 8, 2016)),
+    date("l",mktime(0, 0, 0, 04, 9, 2016)),
+    date("l",mktime(0, 0, 0, 04, 10, 2016))
+);
+
+$now = date("l",time());//текущий день недели
 
 foreach ($days as $day){
     if ($now == $day){
