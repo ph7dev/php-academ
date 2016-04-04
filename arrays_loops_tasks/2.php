@@ -9,8 +9,10 @@ error_reporting(-1);
 function tit($number){
     return "<br><br><i>//task $number</i><br>";
 }
-
+date_default_timezone_set('Europe/Kiev');
 define ("B","<br>");
+
+
 //1
 $elemnts = array ('html', 'css', 'php', 'js', 'jq');
 echo tit(1);
@@ -37,7 +39,7 @@ foreach ($quads as $quad){
 echo "сумма квадратов = ".$res_q.'<br>';
 
 //4
-
+/*
 $arr = array('green' => 'зеленый', 'red' => 'красный', 'blue' => 'голубой');
 echo tit(4);
 echo "Список ключей:<br>";
@@ -48,6 +50,14 @@ echo "Список значений:<br>";
 foreach ($arr as $value){
     echo $value.'<br>';
 }
+*/
+$arr = array('green' => 'зеленый', 'red' => 'красный', 'blue' => 'голубой');
+echo tit(4);
+echo "Список ключей и значений:<br>";
+foreach ($arr as $k=>$value){
+    echo "[".$k."] = ".$value.B;
+}
+
 
 //5
 echo tit(5);
@@ -174,14 +184,31 @@ echo tit(16);
 
 //17
 echo tit(17);
-
+/*
 $months = array (
     'Январь','Февраль',
     'Март','Апрель','Май',
     'Июнь','Июль','Август',
     'Сентябрь','Октябрь','Ноябрь',
     'Декабрь');
-$now = 'Март';
+*/
+$months = array(
+    //mktime(время,время,время,месяц,число,год)
+    date("F",mktime(0, 0, 0, 1, 13, 0)),
+    date("F",mktime(0, 0, 0, 2, 13, 0)),
+    date("F",mktime(0, 0, 0, 3, 13, 0)),
+    date("F",mktime(0, 0, 0, 4, 13, 0)),
+    date("F",mktime(0, 0, 0, 5, 13, 0)),
+    date("F",mktime(0, 0, 0, 6, 13, 0)),
+    date("F",mktime(0, 0, 0, 7, 13, 0)),
+    date("F",mktime(0, 0, 0, 8, 13, 0)),
+    date("F",mktime(0, 0, 0, 9, 13, 0)),
+    date("F",mktime(0, 0, 0, 10, 13, 0)),
+    date("F",mktime(0, 0, 0, 11, 13, 0)),
+    date("F",mktime(0, 0, 0, 12, 13, 0)),
+);
+
+$now = date("F",time());
 
 foreach ($months as $month){
     if ($now == $month){
