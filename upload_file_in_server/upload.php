@@ -31,9 +31,9 @@ $uploadfile = "C:\AppServ\www\upload\\".$_FILES['uploadfile']['name'];
 //должны быть права на запись в эту папку
 if (isset($_FILES['uploadfile']['name'])){
 	if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile)){
-		//echo "<h3>Файл успешно загружен на сервер</h3>";
-		$_SESSION['result_up'] = "<h3>Файл успешно загружен на сервер</h3>";
-		header ('Location: test.php');
+		echo "<h3>Файл успешно загружен на сервер</h3>";
+		//$_SESSION['result_up'] = "<h3>Файл успешно загружен на сервер</h3>";
+		//header ('Location: test.php');
 	}else{
 		echo "<h3>Ошибка! Не удалось загрузить файл на сервер!</h3>"; 
 		exit; 
@@ -49,7 +49,14 @@ if (isset($_FILES['uploadfile']['name'])){
 
 }
 
-echo $_SESSION['result_up'];
-unset($_SESSION['result_up']);
+//echo $_SESSION['result_up'];
+//unset($_SESSION['result_up']);
 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
+
+//узнать как сохранить и сделать вывод текстовой информации про результат операции при использовании
+//перезапроса страницы методом header ('Location: test.php');
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
 ?>
