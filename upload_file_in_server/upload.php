@@ -27,7 +27,7 @@ $uploadfile = "C:\AppServ\www\upload\\".$_FILES['uploadfile']['name'];
 // Копируем файл из каталога для временного хранения файлов:
 //$_FILES['uploadfile']['tmp_name'] - тут содержится полный адрес к временному файлу
 //директория для сохранения временного файла указана  в php.ini
-//путь в php.ini указываем так: upload_tmp_dir = C:\Users\slim\uploadx
+//путь в php.ini указываем так: upload_tmp_dir = C:\Users\*ваш_пользователь*\uploadx
 //должны быть права на запись в эту папку
 if (isset($_FILES['uploadfile']['name'])){
 	if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile)){
